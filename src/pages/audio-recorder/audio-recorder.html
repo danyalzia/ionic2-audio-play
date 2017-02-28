@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Audio Recorder</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+		<div>
+			<b>Simple Interface for Audio Recorder</b>
+		</div>
+		<button ion-button (click)="startRecording()">
+		  Start recording
+		</button>
+		<button ion-button (click)="stopRecording()">
+		  Stop recording
+		</button>
+		
+		<div *ngIf = "recorded">
+			<button ion-button (click)="playRecording()">
+			  Start playback
+			</button>
+			<button ion-button (click)="stopRecordingPlay()">
+			  Stop playback
+			</button>
+		</div>
+</ion-content>
